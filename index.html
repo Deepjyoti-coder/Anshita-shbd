@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>A Little World for Anshita ❤️ | By Deep</title>
+  <meta name="description" content="A cinematic, interactive romantic experience created with love by Deep for Anshita on her Birthday. 33 kilometers between us, a thousand little reasons to smile.">
+  <meta name="theme-color" content="#080811">
+  <meta name="author" content="Deep">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/heart.svg">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A Little World for Anshita ❤️ | By Deep">
+  <meta property="og:description" content="Some people don't need to be far away to be missed. Sometimes, even 33 kilometers feel like a thousand when all you want is to be with them.">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+
+  <!-- Handcrafted Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="universe-body">
+  <!-- Screen reader skip link -->
+  <a href="#scene-0" class="sr-only">Skip to main romantic experience</a>
+
+  <!-- Ambient Cinematic Background Canvas (Stars, Aurora, Falling Petals, Shooting Stars) -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Radial Light Cursor Tracker (Desktop) -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Subtle Film Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Unobtrusive Scene Progress Bar & Navigator -->
+  <nav id="story-nav" class="story-nav" aria-label="Story Progress">
+    <div class="nav-track">
+      <div id="nav-indicator" class="nav-indicator" style="height: 0%;"></div>
+    </div>
+    <div class="nav-dots" id="nav-dots" role="tablist">
+      <button class="nav-dot active" data-scene="0" aria-label="Scene 0: The First Hello" role="tab" aria-selected="true"><span class="dot-tooltip">The First Hello</span></button>
+      <button class="nav-dot" data-scene="countdown" aria-label="Scene: Birthday Countdown" role="tab" aria-selected="false"><span class="dot-tooltip">Countdown 🎂</span></button>
+      <button class="nav-dot" data-scene="1" aria-label="Scene 1: Two Places, One World" role="tab" aria-selected="false"><span class="dot-tooltip">Two Places (33 KM)</span></button>
+      <button class="nav-dot" data-scene="2" aria-label="Scene 2: Made Just For You" role="tab" aria-selected="false"><span class="dot-tooltip">For You</span></button>
+      <button class="nav-dot" data-scene="faculty" aria-label="Scene: The Faculty Room" role="tab" aria-selected="false"><span class="dot-tooltip">First Look 🏫</span></button>
+      <button class="nav-dot" data-scene="first-convo" aria-label="Scene: 3 September" role="tab" aria-selected="false"><span class="dot-tooltip">3 September 📅</span></button>
+      <button class="nav-dot" data-scene="3" aria-label="Scene 3: That Beautiful Smile" role="tab" aria-selected="false"><span class="dot-tooltip">Your Smile</span></button>
+      <button class="nav-dot" data-scene="birthdays" aria-label="Scene: Our Birthdays" role="tab" aria-selected="false"><span class="dot-tooltip">The Magic of 9 🎂</span></button>
+      <button class="nav-dot" data-scene="cosmic-9" aria-label="Scene: Cosmic Theory" role="tab" aria-selected="false"><span class="dot-tooltip">Cosmic Theory 🌌</span></button>
+      <button class="nav-dot" data-scene="flirty" aria-label="Scene: Flirty Thoughts" role="tab" aria-selected="false"><span class="dot-tooltip">Flirty Lines 💬</span></button>
+      <button class="nav-dot" data-scene="5" aria-label="Scene 5: Only 33 Kilometers" role="tab" aria-selected="false"><span class="dot-tooltip">33 Kilometers</span></button>
+      <button class="nav-dot" data-scene="6" aria-label="Scene 6: The Little Things" role="tab" aria-selected="false"><span class="dot-tooltip">Little Things</span></button>
+      <button class="nav-dot" data-scene="7" aria-label="Scene 7: Our Little Timeline" role="tab" aria-selected="false"><span class="dot-tooltip">Our Timeline</span></button>
+      <button class="nav-dot" data-scene="4" aria-label="Scene 4: A Letter From Deep" role="tab" aria-selected="false"><span class="dot-tooltip">Deep's Letter</span></button>
+      <button class="nav-dot" data-scene="8" aria-label="Scene 8: A Little Heart" role="tab" aria-selected="false"><span class="dot-tooltip">A Little Heart</span></button>
+      <button class="nav-dot" data-scene="handmade" aria-label="Scene: A Handmade Surprise" role="tab" aria-selected="false"><span class="dot-tooltip">Sweet Surprise 🍫</span></button>
+      <button class="nav-dot" data-scene="9" aria-label="Scene 9: Our Cherished Memories" role="tab" aria-selected="false"><span class="dot-tooltip">Our Memories</span></button>
+      <button class="nav-dot" data-scene="10" aria-label="Scene 10: Until The Next Time" role="tab" aria-selected="false"><span class="dot-tooltip">Until Next Time</span></button>
+      <button class="nav-dot" data-scene="11" aria-label="Scene 11: Just For You, Anshita" role="tab" aria-selected="false"><span class="dot-tooltip">Final Words</span></button>
+    </div>
+  </nav>
+
+  <!-- Top Minimal Brand Bar with Interactive Heart & Live Countdown -->
+  <header class="experience-header" role="banner">
+    <div class="brand-badge" id="brand-badge" title="Tap for love!">
+      <span class="heart-pulse-icon" id="header-brand-heart" aria-hidden="true" title="Click me for a burst of love!">❤️</span>
+      <span class="brand-text">For Anshita &bull; From Deep</span>
+    </div>
+
+    <!-- Live Header Birthday Countdown Pill -->
+    <button class="header-countdown-pill" id="header-countdown-pill" aria-label="Go to Birthday Countdown">
+      <span class="pill-sparkle">🎂</span>
+      <span class="pill-label">25 OCT:</span>
+      <span class="pill-timer" id="header-countdown-timer">00d 00h 00m 00s</span>
+      <span class="pill-heart">💖</span>
+    </button>
+
+    <div class="occasion-tag">Happy Birthday</div>
+  </header>
+
+  <!-- MAIN SCENIC CONTAINER -->
+  <main id="experience-container" class="experience-container">
+
+    <!-- ==========================================
+         SCENE 0 — THE FIRST HELLO
+         ========================================== -->
+    <section id="scene-0" class="scene scene-prologue" aria-label="The First Hello">
+      <div class="scene-inner prologue-content">
+        <div class="prologue-stars-glow" aria-hidden="true"></div>
+        <div class="prologue-type-box" aria-live="polite">
+          <p id="prologue-line-1" class="prologue-line">Some people enter your life unexpectedly...</p>
+          <p id="prologue-line-2" class="prologue-line">And suddenly, ordinary days feel different.</p>
+          <p id="prologue-line-3" class="prologue-line">Somewhere along the way...</p>
+          <h1 id="prologue-line-4" class="prologue-line prologue-hero-name">You became someone special, Anshita.</h1>
+        </div>
+
+        <div id="prologue-reveal" class="prologue-reveal">
+          <div class="crystal-heart-mini" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="40" height="40" fill="none" class="mini-heart-svg">
+              <path d="M20 33.5C20 33.5 6 24.5 6 14C6 8.5 10.5 4.5 16 4.5C18.8 4.5 20 6.5 20 6.5C20 6.5 21.2 4.5 24 4.5C29.5 4.5 34 8.5 34 14C34 24.5 20 33.5 20 33.5Z" stroke="#E8C98A" stroke-width="1.8" fill="url(#heart-grad-mini)" />
+              <defs>
+                <linearGradient id="heart-grad-mini" x1="6" y1="4.5" x2="34" y2="33.5">
+                  <stop offset="0%" stop-color="#FF8FB1" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#C6B5FF" stop-opacity="0.3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <p class="prologue-subtext">There's something I made just for you.</p>
+          <button id="btn-enter-world" class="btn btn-luxury" aria-label="Enter our little world">
+            <span class="btn-text">ENTER OUR LITTLE WORLD</span>
+            <span class="btn-glow" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE: BIRTHDAY COUNTDOWN & BURST WITH LOVE
+         ========================================== -->
+    <section id="scene-countdown" class="scene scene-countdown" aria-label="Countdown to Anshita's Birthday">
+      <div class="scene-inner countdown-inner">
+        
+        <div class="section-header countdown-header">
+          <span class="eyebrow-tag">A Special Day Ahead &bull; 25 October</span>
+          <h2 class="scene-title">Counting Down to Your Birthday <span class="cake-sparkle">🎂</span></h2>
+          <p class="section-subtext">Every second ticking by brings us closer to celebrating the girl who makes ordinary days feel magical.</p>
+        </div>
+
+        <div class="countdown-hero-stage">
+          <!-- Glassmorphism Main Countdown Board -->
+          <div class="countdown-glass-card">
+            <div class="countdown-halo" aria-hidden="true"></div>
+
+            <!-- Header Badge inside Card -->
+            <div class="countdown-card-top">
+              <span class="countdown-target-badge">
+                <span class="badge-dot-live"></span>
+                <span>25 OCTOBER &bull; ANSHITA'S DAY</span>
+              </span>
+            </div>
+
+            <!-- Interactive Beating Crystal Burst Heart Center -->
+            <div class="burst-heart-wrapper" id="countdown-burst-heart-wrap">
+              <div class="burst-shockwave-ring" id="burst-shockwave-1" aria-hidden="true"></div>
+              <div class="burst-shockwave-ring" id="burst-shockwave-2" aria-hidden="true"></div>
+              <div class="burst-heart-glow" id="burst-heart-glow" aria-hidden="true"></div>
+              
+              <button class="countdown-interactive-heart" id="btn-burst-countdown-heart" aria-label="Tap the heart to burst with love" title="Tap to burst with love!">
+                <svg viewBox="0 0 100 90" class="burst-heart-svg" id="burst-heart-svg">
+                  <defs>
+                    <linearGradient id="countdownHeartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FF5376" />
+                      <stop offset="45%" stop-color="#FF8FB1" />
+                      <stop offset="100%" stop-color="#E8C98A" />
+                    </linearGradient>
+                    <filter id="heartBurstFilter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                  </defs>
+                  <path d="M50,83 C50,83 10,55 10,28 C10,13 22,5 35,5 C43,5 47,10 50,15 C53,10 57,5 65,5 C78,5 90,13 90,28 C90,55 50,83 50,83 Z"
+                        fill="url(#countdownHeartGrad)" filter="url(#heartBurstFilter)" />
+                  <path d="M35,12 C28,12 20,18 20,28 C20,38 30,52 50,70 C70,52 80,38 80,28 C80,18 72,12 65,12 C58,12 53,17 50,22 C47,17 42,12 35,12 Z"
+                        fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" />
+                </svg>
+                <span class="burst-heart-tap-hint">TAP TO BURST 💖</span>
+              </button>
+            </div>
+
+            <!-- Countdown Timer Digits (Days, Hours, Minutes, Seconds) -->
+            <div class="countdown-clock-grid" id="bday-countdown-grid" role="timer" aria-live="off">
+              <div class="countdown-block" data-unit="days">
+                <div class="countdown-digit-wrap">
+                  <span class="countdown-digit" id="bday-days">00</span>
+                </div>
+                <span class="countdown-unit-label">DAYS</span>
+              </div>
+
+              <div class="countdown-colon">:</div>
+
+              <div class="countdown-block" data-unit="hours">
+                <div class="countdown-digit-wrap">
+                  <span class="countdown-digit" id="bday-hours">00</span>
+                </div>
+                <span class="countdown-unit-label">HOURS</span>
+              </div>
+
+              <div class="countdown-colon">:</div>
+
+              <div class="countdown-block" data-unit="minutes">
+                <div class="countdown-digit-wrap">
+                  <span class="countdown-digit" id="bday-minutes">00</span>
+                </div>
+                <span class="countdown-unit-label">MINUTES</span>
+              </div>
+
+              <div class="countdown-colon">:</div>
+
+              <div class="countdown-block" data-unit="seconds">
+                <div class="countdown-digit-wrap highlight-gold-box">
+                  <span class="countdown-digit" id="bday-seconds">00</span>
+                </div>
+                <span class="countdown-unit-label">SECONDS</span>
+              </div>
+
+              <div class="countdown-colon">:</div>
+
+              <div class="countdown-block countdown-block-ms" data-unit="ms">
+                <div class="countdown-digit-wrap highlight-ms-box">
+                  <span class="countdown-digit countdown-digit-ms" id="bday-ms">00</span>
+                </div>
+                <span class="countdown-unit-label">MS</span>
+              </div>
+            </div>
+
+            <!-- Dynamic Live Status Banner -->
+            <div class="countdown-status-box" id="bday-countdown-status">
+              <p class="status-message" id="bday-status-text">
+                Every beat of time is leading up to your special day, Anshita. ✨
+              </p>
+            </div>
+
+            <!-- Action Buttons: Burst Heart & Continue -->
+            <div class="countdown-action-row">
+              <button id="btn-burst-love" class="btn btn-luxury btn-heart-burst" aria-label="Make heart burst with love">
+                <span class="btn-heart-burst-icon">💥</span>
+                <span class="btn-text">BURST WITH LOVE</span>
+                <span class="btn-heart-burst-icon">❤️</span>
+              </button>
+
+              <button id="btn-countdown-continue" class="btn btn-gold-outline" aria-label="Continue to our story">
+                <span class="btn-text">EXPLORE OUR WORLD ↓</span>
+              </button>
+            </div>
+
+            <!-- Floating burst affirmation toast -->
+            <div id="heart-burst-toast" class="heart-burst-toast" aria-live="polite"></div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 1 — TWO PLACES, ONE LITTLE WORLD
+         ========================================== -->
+    <section id="scene-1" class="scene scene-map" aria-label="Two Places, One Little World">
+      <div class="scene-inner">
+        <div class="section-header">
+          <span class="eyebrow-tag">A Raipur Connection</span>
+          <h2 class="scene-title">Two Places, One Little World</h2>
+        </div>
+
+        <!-- Stylized Nighttime Map Composition -->
+        <div class="map-artistic-canvas" id="raipur-map-box">
+          <div class="map-grid-overlay" aria-hidden="true"></div>
+          <div class="map-ambient-aurora" aria-hidden="true"></div>
+
+          <!-- SVG Visual Arc connecting Amity & Pandri -->
+          <svg class="map-svg-routes" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#C6B5FF" stop-opacity="0.9"/>
+                <stop offset="50%" stop-color="#FF8FB1" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#E8C98A" stop-opacity="0.9"/>
+              </linearGradient>
+              <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <!-- Background subtle connection trail -->
+            <path id="connection-path-base" d="M 170 310 Q 400 130 630 200" fill="none" stroke="rgba(255, 143, 177, 0.18)" stroke-width="6" />
+            <!-- Animated Main Glowing Path -->
+            <path id="connection-path" d="M 170 310 Q 400 130 630 200" fill="none" stroke="url(#routeGradient)" stroke-width="3" filter="url(#glow-gold)" stroke-linecap="round" />
+            
+            <!-- Animated Particle Orbs along Path -->
+            <circle id="map-travel-dot-1" r="5" fill="#E8C98A" filter="url(#glow-gold)"></circle>
+            <circle id="map-travel-dot-2" r="4" fill="#FF8FB1"></circle>
+          </svg>
+
+          <!-- Deep's Location Marker (Amity University Raipur) -->
+          <button class="map-location-marker marker-deep" id="marker-deep" aria-label="Deep's Location: Amity University Raipur">
+            <div class="marker-pulse-ring"></div>
+            <div class="marker-pin">
+              <span class="pin-symbol">✦</span>
+            </div>
+            <div class="marker-label-box">
+              <span class="marker-tag">Deep</span>
+              <span class="marker-place">Amity University Raipur</span>
+            </div>
+          </button>
+
+          <!-- Anshita's Location Marker (Pandri, Raipur) -->
+          <button class="map-location-marker marker-anshita" id="marker-anshita" aria-label="Anshita's Location: Pandri, Raipur">
+            <div class="marker-pulse-ring marker-pulse-rose"></div>
+            <div class="marker-pin marker-pin-rose">
+              <span class="pin-symbol">❤️</span>
+            </div>
+            <div class="marker-label-box">
+              <span class="marker-tag">Anshita</span>
+              <span class="marker-place">Pandri, Raipur</span>
+            </div>
+          </button>
+
+          <!-- Distance Badge In Center -->
+          <div class="distance-pill-badge" id="map-distance-badge">
+            <span class="badge-icon">📍</span>
+            <div class="badge-details">
+              <span class="badge-km">33 KM</span>
+              <span class="badge-sub">Connected in Raipur</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Location Glass Card Popup (On Marker Click) -->
+        <div id="map-info-modal" class="glass-info-card" aria-live="polite">
+          <div class="glass-card-header">
+            <span id="modal-tag" class="modal-tag">Location Detail</span>
+            <button id="btn-close-modal" class="modal-close" aria-label="Close location card">&times;</button>
+          </div>
+          <h3 id="modal-title" class="modal-title">Amity University Raipur</h3>
+          <p id="modal-body" class="modal-body">Where Deep spends his days studying, coding, and thinking of you across the city.</p>
+        </div>
+
+        <!-- Progressive Narrative Block -->
+        <div class="map-story-stream">
+          <p class="story-stanza">Different corners of the same city.</p>
+          <p class="story-stanza">Different routines. Different days.</p>
+          <p class="story-stanza highlight-stanza">But somehow, you still find your way into my thoughts.</p>
+          <div class="distance-divider">
+            <span class="distance-line"></span>
+            <span class="distance-text">Thirty-three kilometers.</span>
+            <span class="distance-line"></span>
+          </div>
+          <p class="story-stanza emotional-lead">Yet some moments, all I want is to be a little closer to you.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 2 — MADE JUST FOR YOU
+         ========================================== -->
+    <section id="scene-2" class="scene scene-garden" aria-label="Made Just For You">
+      <div class="scene-inner">
+        <div class="garden-ambient-aurora" aria-hidden="true"></div>
+
+        <div class="luxury-glass-card garden-card" id="garden-glass-card">
+          <div class="card-shimmer" aria-hidden="true"></div>
+          
+          <div class="card-eyebrow">
+            <span class="sparkle-gem">✦</span>
+            <span>A LITTLE SOMETHING FOR YOU</span>
+            <span class="sparkle-gem">✦</span>
+          </div>
+
+          <div class="occasion-banner">Happy Birthday</div>
+
+          <h2 class="card-salutation">Dear Anshita, <span class="heart-accent">❤️</span></h2>
+
+          <div class="card-body-text">
+            <p class="romantic-quote">
+              &ldquo;Out of all the ordinary things that happen in a day, talking to you has a way of becoming my favorite part.&rdquo;
+            </p>
+            <p class="soft-contrast">Some people make life louder.</p>
+            <p class="soft-warmth">You make certain moments feel warmer.</p>
+          </div>
+
+          <div class="card-action">
+            <button id="btn-open-heart" class="btn btn-luxury" aria-label="Open my heart to reveal next scene">
+              <span class="btn-text">OPEN MY HEART</span>
+              <span class="btn-icon">✨</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE: THE DAY I GOT LOST (The Faculty Room)
+         ========================================== -->
+    <section id="scene-faculty" class="scene scene-faculty" aria-label="The Day I Got Lost — The Faculty Room">
+      <div class="faculty-sunbeam" aria-hidden="true"></div>
+      <div class="faculty-dust-motes" aria-hidden="true"></div>
+      
+      <div class="scene-inner faculty-inner">
+        <div class="section-header faculty-header">
+          <span class="eyebrow-tag">A Memory From The Faculty Room</span>
+          <h2 class="scene-title">The Day I Got Lost</h2>
+          <p class="section-subtext">Some moments seem ordinary to everyone else... but stay with you forever.</p>
+        </div>
+
+        <div class="faculty-card-stage">
+          <div class="faculty-glass-card">
+            <div class="faculty-ambient-glow" aria-hidden="true"></div>
+            
+            <div class="faculty-narrative-flow">
+              <p class="faculty-text lead-memory">I still remember seeing you for the very first time.</p>
+              <div class="faculty-divider" aria-hidden="true"><span>✦</span></div>
+              <p class="faculty-text place-memory">It was in the faculty room.</p>
+              <div class="faculty-divider" aria-hidden="true"><span>✦</span></div>
+              <p class="faculty-text spark-memory">I didn't know that one ordinary moment would become such a special memory.</p>
+
+              <!-- Central Climax Box -->
+              <div class="faculty-climax-box">
+                <p class="faculty-gaze-intro">And then I looked into your eyes...</p>
+                <h3 class="faculty-gaze-core">&ldquo;And honestly, I got a little lost.&rdquo;</h3>
+                <div class="faculty-pause-indicator" aria-hidden="true">✦ &bull; ✦</div>
+                <p class="faculty-gaze-detail">Not because I forgot where I was...<br>But because, for a moment, I forgot what I was supposed to be thinking about.</p>
+              </div>
+
+              <div class="faculty-playful-box">
+                <span class="playful-icon">😉</span>
+                <p class="faculty-playful-line">&ldquo;I went into the faculty room expecting an ordinary day.<br>Didn't expect to walk out with a new favorite pair of eyes.&rdquo;</p>
+              </div>
+
+              <div class="faculty-concluding-box">
+                <p class="faculty-text linger-thought">Funny how some moments seem ordinary to everyone else...<br><strong>But stay with you long after they're over.</strong></p>
+                <div class="faculty-pause-indicator" aria-hidden="true">✦ &bull; ✦</div>
+                <p class="faculty-text closing-smile">That was the first time I saw you, Anshita.<br>And even now, that little memory makes me smile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE: 3 SEPTEMBER — THE FIRST HELLO
+         ========================================== -->
+    <section id="scene-first-convo" class="scene scene-first-convo" aria-label="3 September — The First Conversation">
+      <div class="scene-inner convo-inner">
+        <div class="section-header convo-header">
+          <span class="eyebrow-tag">The Beginning Of Our Story</span>
+          <h2 class="scene-title">3 September — The First Hello</h2>
+          <p class="section-subtext">A simple date on the calendar that became unforgettable.</p>
+        </div>
+
+        <div class="convo-stage">
+          <!-- Animated Calendar Display -->
+          <div class="calendar-card-wrapper" id="calendar-wrapper">
+            <div class="calendar-sheet">
+              <div class="calendar-header-bar">
+                <span class="cal-month">SEPTEMBER</span>
+                <span class="cal-pin">✦</span>
+              </div>
+              <div class="calendar-body">
+                <div class="calendar-date-container">
+                  <span class="calendar-day-number" id="cal-num-3">03</span>
+                  <svg class="calendar-ring-svg" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="ring-circle" cx="60" cy="60" r="52" fill="none" stroke="#E8C98A" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                  <div class="cal-sparkle-dot s1" aria-hidden="true">✨</div>
+                  <div class="cal-sparkle-dot s2" aria-hidden="true">✦</div>
+                </div>
+                <div class="calendar-caption">OUR FIRST CONVERSATION</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Narrative Flow -->
+          <div class="convo-narrative-card">
+            <div class="convo-quote-stream">
+              <p class="convo-line-1">Seeing you for the first time was one thing.</p>
+              <p class="convo-line-2">But talking to you for the very first time...</p>
+              <p class="convo-line-highlight">That was the beginning of a different little memory.</p>
+
+              <div class="convo-date-callout">
+                <span class="callout-date">3 SEPTEMBER</span>
+                <span class="callout-label">Our first conversation. A simple date on the calendar... but one I'll always remember.</span>
+              </div>
+
+              <div class="convo-humor-box">
+                <p class="humor-line-1">&ldquo;Who knew one conversation could make someone this memorable?&rdquo;</p>
+                <p class="humor-line-2">&ldquo;Honestly, Anshita... If I had known you'd become this special to me, I might have tried a little harder to look cool that day. 😂❤️&rdquo;</p>
+                <div class="convo-pause-dots" aria-hidden="true">✦ &bull; ✦</div>
+                <p class="humor-line-3">But maybe it's better that I didn't.<br>Because being myself somehow led me to you.</p>
+              </div>
+
+              <div class="convo-summary-pills">
+                <span class="summary-pill">One faculty room.</span>
+                <span class="summary-pill">One first look.</span>
+                <span class="summary-pill">One first conversation.</span>
+                <span class="summary-pill pill-gold">And a story that became ours.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 3 — THAT BEAUTIFUL SMILE (Photo 1)
+         ========================================== -->
+    <section id="scene-3" class="scene scene-portrait" aria-label="That Beautiful Smile">
+      <div class="scene-inner portrait-layout">
+        <div class="portrait-stage">
+          
+          <!-- Elegant Circular/Softly Rounded Frame with Champagne Gold Border & Rose Illumination -->
+          <div class="luxury-portrait-frame float-animation" id="portrait-frame-1">
+            <div class="portrait-halo" aria-hidden="true"></div>
+            <div class="portrait-inner">
+              <img 
+                src="assets/images/anshita-photo-1.jpg" 
+                alt="A cherished memory of Anshita smiling" 
+                class="portrait-img"
+                id="img-anshita-1"
+                loading="eager"
+                onerror="this.onerror=null; this.src='assets/images/anshita-photo-1.jpg';"
+              />
+              <div class="portrait-glass-reflection" aria-hidden="true"></div>
+            </div>
+            <div class="frame-corner-ornament ornament-tl"></div>
+            <div class="frame-corner-ornament ornament-tr"></div>
+            <div class="frame-corner-ornament ornament-bl"></div>
+            <div class="frame-corner-ornament ornament-br"></div>
+          </div>
+
+          <!-- Cinematic Caption -->
+          <div class="portrait-caption-box">
+            <div class="caption-tag">Memory &bull; Smile</div>
+            <p class="caption-line-1">&ldquo;Some smiles stay with you long after the moment has passed.&rdquo;</p>
+            <div class="caption-pause-indicator" aria-hidden="true">✦ &bull; ✦</div>
+            <p class="caption-line-2">And yours has a habit of doing exactly that.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE: OUR BIRTHDAYS — TWO DATES, ONE CONNECTION
+         ========================================== -->
+    <section id="scene-birthdays" class="scene scene-birthdays" aria-label="Maybe 9 Has Always Been Our Number">
+      <div class="scene-inner birthdays-inner">
+        <div class="section-header birthdays-header">
+          <span class="eyebrow-tag">Two Dates &bull; One Little Connection</span>
+          <h2 class="scene-title">Maybe 9 Has Always Been Our Number</h2>
+          <p class="section-subtext">Nine little days on the calendar separating two special dates.</p>
+        </div>
+
+        <div class="birthdays-stage">
+          <!-- Two Floating Glass Cards with Number 9 Bridge -->
+          <div class="birthday-cards-bridge">
+            <!-- Left Card: Anshita -->
+            <div class="bday-glass-card anshita-card" id="bday-card-anshita">
+              <div class="bday-halo halo-rose" aria-hidden="true"></div>
+              <div class="bday-card-content">
+                <span class="bday-heart">♡</span>
+                <h3 class="bday-name">ANSHITA</h3>
+                <div class="bday-date-badge">25 OCTOBER</div>
+                <p class="bday-role">The Birthday Girl ✨</p>
+                <!-- Mini live countdown pill in the card -->
+                <div class="bday-card-countdown" id="bday-card-countdown">
+                  <span class="card-countdown-icon">⏳</span>
+                  <span class="card-countdown-text" id="bday-card-countdown-text">Counting down...</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Central Number 9 Nexus -->
+            <div class="bday-nexus-center" id="bday-nexus">
+              <div class="nexus-glow-pulse" aria-hidden="true"></div>
+              <svg class="nexus-constellation-line" viewBox="0 0 200 60" aria-hidden="true">
+                <line x1="10" y1="30" x2="190" y2="30" stroke="url(#nexusGrad)" stroke-width="2" stroke-dasharray="4 4"/>
+                <circle cx="10" cy="30" r="4" fill="#FF8FB1"/>
+                <circle cx="100" cy="30" r="6" fill="#E8C98A"/>
+                <circle cx="190" cy="30" r="4" fill="#C6B5FF"/>
+                <defs>
+                  <linearGradient id="nexusGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#FF8FB1"/>
+                    <stop offset="50%" stop-color="#E8C98A"/>
+                    <stop offset="100%" stop-color="#C6B5FF"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="nexus-number-9">9</div>
+              <span class="nexus-label">DAYS APART</span>
+            </div>
+
+            <!-- Right Card: Deep -->
+            <div class="bday-glass-card deep-card" id="bday-card-deep">
+              <div class="bday-halo halo-gold" aria-hidden="true"></div>
+              <div class="bday-card-content">
+                <span class="bday-heart">♡</span>
+                <h3 class="bday-name">DEEP</h3>
+                <div class="bday-date-badge">3 NOVEMBER</div>
+                <p class="bday-role">Nine Days Later 🌙</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animated Text Sequence -->
+          <div class="bday-story-sequence">
+            <div class="bday-lines-box">
+              <p class="bday-line">&ldquo;Your birthday comes on 25 October.&rdquo;</p>
+              <p class="bday-line">&ldquo;Mine arrives on 3 November.&rdquo;</p>
+              <p class="bday-line highlight-gold">&ldquo;Just nine days between our birthdays.&rdquo;</p>
+              <p class="bday-line">&ldquo;Nine little days separating two dates...<br>Yet somehow, you managed to become someone so special to me.&rdquo;</p>
+              <div class="bday-clue-banner">
+                <h3>&ldquo;Maybe the universe left a little 9-shaped clue.&rdquo;</h3>
+              </div>
+              <div class="bday-playful-flirt">
+                <p class="flirt-lead">&ldquo;Your birthday comes first, so technically, you get nine days to prepare for the person who is about to steal a little more of your attention. 😉&rdquo;</p>
+                <div class="bday-pause" aria-hidden="true">✦ &bull; ✦</div>
+                <p class="flirt-gift">&ldquo;And when my birthday finally arrives...<br><span class="gift-glow">Your smile would still be my favorite gift.</span>&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE: THE NUMBER 9 — OUR LITTLE COSMIC THEORY
+         ========================================== -->
+    <section id="scene-cosmic-9" class="scene scene-cosmic-9" aria-label="The Universe Has Some Explaining To Do">
+      <div class="cosmic-stars-canvas-bg" aria-hidden="true"></div>
+      
+      <div class="scene-inner cosmic-inner">
+        <div class="section-header cosmic-header">
+          <span class="eyebrow-tag">A Cosmic Theory &bull; Deep &amp; Anshita</span>
+          <h2 class="scene-title">The Universe Has Some Explaining to Do 🌌</h2>
+          <p class="section-subtext">Three symbolic connections that make me smile every time I think of nine.</p>
+        </div>
+
+        <!-- Central Rotating Number 9 Showcase -->
+        <div class="cosmic-centerpiece">
+          <div class="cosmic-orbital-disc" aria-hidden="true">
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+            <div class="orbit-ring ring-3"></div>
+          </div>
+          
+          <div class="central-glowing-9" id="cosmic-core-9" aria-label="Rotating glowing number 9">
+            <span class="digit-9-glow">9</span>
+          </div>
+        </div>
+
+        <!-- Three Symbolic Connections Interactive Showcase -->
+        <div class="cosmic-connections-grid">
+          <!-- Connection 1: Our Birthdays -->
+          <article class="cosmic-card" tabindex="0">
+            <div class="cosmic-card-header">
+              <span class="connection-badge">CONNECTION 01</span>
+              <h3 class="connection-title">OUR BIRTHDAYS</h3>
+            </div>
+            <div class="connection-body">
+              <div class="connection-dates-callout">
+                <span>25 OCTOBER</span>
+                <span class="arrow-sparkle">→</span>
+                <span>3 NOVEMBER</span>
+              </div>
+              <div class="connection-highlight-tag">9 DAYS APART</div>
+              <p class="connection-text">&ldquo;Of all the dates on the calendar, yours comes just nine days before mine.&rdquo;</p>
+              <p class="connection-sub">&ldquo;Coincidence? Probably.<br>But let me enjoy my little theory. ❤️&rdquo;</p>
+            </div>
+          </article>
+
+          <!-- Connection 2: Navratri -->
+          <article class="cosmic-card" tabindex="0">
+            <div class="cosmic-card-header">
+              <span class="connection-badge">CONNECTION 02</span>
+              <h3 class="connection-title">NAVRATRI</h3>
+            </div>
+            <div class="connection-body">
+              <!-- Circular Array of 9 Sacred Glowing Lights -->
+              <div class="navratri-lights-ring" aria-label="Nine sacred glowing lights honoring the nine divine forms">
+                <span class="sacred-light l1" title="Shailaputri">🪔</span>
+                <span class="sacred-light l2" title="Brahmacharini">🪔</span>
+                <span class="sacred-light l3" title="Chandraghanta">🪔</span>
+                <span class="sacred-light l4" title="Kushmanda">🪔</span>
+                <span class="sacred-light l5" title="Skandamata">🪔</span>
+                <span class="sacred-light l6" title="Katyayani">🪔</span>
+                <span class="sacred-light l7" title="Kalaratri">🪔</span>
+                <span class="sacred-light l8" title="Mahagauri">🪔</span>
+                <span class="sacred-light l9" title="Siddhidatri">🪔</span>
+              </div>
+              <div class="connection-highlight-tag">NINE NIGHTS &bull; DIVINE FEMININE ENERGY</div>
+              <p class="connection-text">&ldquo;Navratri celebrates nine nights, traditionally honoring the nine forms of Goddess Durga. And somehow, the number nine found its way into our little story too.&rdquo;</p>
+              <p class="connection-sub">&ldquo;Nine nights of celebration, nine days between our birthdays...<br>Universe, are you trying to tell me something, or am I just finding excuses to flirt with you? 😉&rdquo;</p>
+            </div>
+          </article>
+
+          <!-- Connection 3: The Planets -->
+          <article class="cosmic-card" tabindex="0">
+            <div class="cosmic-card-header">
+              <span class="connection-badge">CONNECTION 03</span>
+              <h3 class="connection-title">THE PLANETS</h3>
+            </div>
+            <div class="connection-body">
+              <!-- Miniature Solar System with 8 Planets + Pluto Dwarf -->
+              <div class="solar-system-mini" aria-label="Miniature Solar System showing 8 planets and Pluto dwarf planet">
+                <div class="solar-sun" title="The Sun">☀️</div>
+                <div class="planets-row">
+                  <span class="p-orb mercury" title="Mercury">☿</span>
+                  <span class="p-orb venus" title="Venus">♀</span>
+                  <span class="p-orb earth" title="Earth">🌍</span>
+                  <span class="p-orb mars" title="Mars">♂</span>
+                  <span class="p-orb jupiter" title="Jupiter">♃</span>
+                  <span class="p-orb saturn" title="Saturn">♄</span>
+                  <span class="p-orb uranus" title="Uranus">♅</span>
+                  <span class="p-orb neptune" title="Neptune">♆</span>
+                  <span class="p-orb pluto-dwarf" title="Pluto (Dwarf Planet)">✦ <small>Pluto</small></span>
+                </div>
+              </div>
+              <p class="solar-caption">Eight recognized planets. Pluto, the famous dwarf planet. And somehow, I still found one more reason to talk about nine.</p>
+              <p class="connection-text">&ldquo;Technically, the Solar System has eight recognized planets, not nine. But in my personal universe... You're the one who keeps my thoughts revolving around you.&rdquo;</p>
+              <p class="connection-sub">&ldquo;Forget Mercury retrograde. One look into your eyes, and my entire system loses its balance. 😏&rdquo;</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Final Cosmic Synthesis Message -->
+        <div class="cosmic-synthesis-card">
+          <div class="synthesis-constellation-triad">
+            <p class="synthesis-line">&ldquo;Nine days between our birthdays.&rdquo;</p>
+            <p class="synthesis-line">&ldquo;Nine nights of Navratri.&rdquo;</p>
+            <p class="synthesis-line highlight-gold">&ldquo;And approximately nine hundred reasons to smile whenever I think of you.&rdquo;</p>
+          </div>
+          <div class="synthesis-footer">
+            <p>&ldquo;Maybe it's all a coincidence. But if the universe is going to give me signs... I might as well use them to flirt with you.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE: A FEW THINGS I PROBABLY SHOULDN'T SAY OUT LOUD
+         ========================================== -->
+    <section id="scene-flirty" class="scene scene-flirty" aria-label="A Few Things I Probably Shouldn't Say Out Loud">
+      <div class="scene-inner flirty-inner">
+        <div class="section-header flirty-header">
+          <span class="eyebrow-tag">Unfiltered Thoughts &bull; Just Between Us</span>
+          <h2 class="scene-title">A Few Things I Probably Shouldn't Say Out Loud 💬</h2>
+          <p class="section-subtext">Click below to reveal one little secret thought at a time.</p>
+        </div>
+
+        <div class="flirty-stage">
+          <!-- Active Flirty Card Display -->
+          <div class="flirty-card-holder">
+            <div class="flirty-card active" id="flirty-active-card">
+              <div class="flirty-card-halo" aria-hidden="true"></div>
+              <div class="flirty-card-header">
+                <span class="flirty-counter" id="flirty-counter">LINE 01 OF 10</span>
+                <span class="flirty-sparkle">✨</span>
+              </div>
+              <div class="flirty-card-body">
+                <p class="flirty-message-text" id="flirty-message-text">
+                  &ldquo;Anshita, I blame your eyes for at least 50% of my inability to act normal around you.&rdquo;
+                </p>
+              </div>
+              <div class="flirty-card-footer">
+                <span class="flirty-secret-tag">Deep's Confession</span>
+              </div>
+            </div>
+
+            <!-- Completion Box (Reveals after line 10) -->
+            <div class="flirty-complete-card is-hidden" id="flirty-complete-card">
+              <div class="complete-header">
+                <span class="complete-emoji">😌</span>
+                <h3>&ldquo;Okay, I'll stop flirting now.&rdquo;</h3>
+              </div>
+              <div class="complete-pause" aria-hidden="true">✦ &bull; ✦</div>
+              <p class="complete-sub">&ldquo;Unless you're smiling. Then I might continue.&rdquo;</p>
+              <button id="btn-flirty-restart" class="btn btn-luxury-outline" aria-label="Start flirty lines from beginning">
+                <span>REPLAY FROM LINE 1 ↻</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="flirty-actions" id="flirty-actions-box">
+            <button id="btn-next-flirty" class="btn btn-luxury" aria-label="Reveal next flirty message">
+              <span class="btn-text">ONE MORE LINE</span>
+              <span class="btn-icon">💌</span>
+            </button>
+            <div class="flirty-progress-pills" id="flirty-pills" aria-hidden="true">
+              <!-- 10 dots indicating progress -->
+              <span class="f-dot active"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+              <span class="f-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 4 — A LETTER FROM DEEP
+         ========================================== -->
+    <section id="scene-4" class="scene scene-letter" aria-label="A Letter From Deep">
+      <div class="scene-inner">
+        <div class="section-header">
+          <span class="eyebrow-tag">From The Heart</span>
+          <h2 class="scene-title">A Letter From Deep</h2>
+        </div>
+
+        <!-- Realistic Unfolding Parchment / Cream Letter -->
+        <article class="parchment-letter-wrapper" id="parchment-letter">
+          <div class="letter-shadow" aria-hidden="true"></div>
+          <div class="parchment-letter">
+            <div class="paper-texture" aria-hidden="true"></div>
+            <div class="letter-top-seal" aria-hidden="true">
+              <span class="seal-icon">D&A</span>
+            </div>
+
+            <div class="letter-content-flow">
+              <h3 class="letter-greeting">Dear Anshita,</h3>
+
+              <div class="letter-paragraphs">
+                <p class="letter-p">
+                  I don't think you realize how naturally you have become such a special part of my life.
+                </p>
+                <p class="letter-p">
+                  Somewhere between our conversations, our random moments, and all the little things we share, you became someone I genuinely look forward to.
+                </p>
+                <p class="letter-p">
+                  You're not just my good friend. You're my closest confidante and my bestie, someone I can laugh with, talk to, and make memories with in my own little way.
+                </p>
+                <p class="letter-p highlight-romantic">
+                  And honestly, that's what makes this connection so beautiful.
+                </p>
+                <p class="letter-p">
+                  Sometimes I think about the first time I saw you in the faculty room. I remember looking into your eyes and getting completely lost for a moment. I had no idea that such an ordinary-looking moment would become something I would remember so fondly.
+                </p>
+                <p class="letter-p">
+                  Then came 3 September, the day we talked for the very first time. It's funny how a simple conversation can become a date worth remembering. If someone had told me that day how special you would become to me, I probably wouldn't have believed them.
+                </p>
+                <p class="letter-p">
+                  Even though we're both in Raipur, life doesn't always let us be where we want to be. Sometimes, 33 kilometers feel like much more when I wish I could simply spend some time with you.
+                </p>
+                <p class="letter-p">
+                  But I love that we can still create moments together, even when we're busy with our own worlds.
+                </p>
+                <p class="letter-p">
+                  Thank you for your smile, your care, your patience, your little ways of making things better, and for being the person you are.
+                </p>
+                <p class="letter-p highlight-romantic">
+                  And then there's our little number nine theory. Your birthday is on 25 October, mine is on 3 November, and there's a nine-day gap between them. Navratri gives us another little connection with its nine nights, and even the planets have become part of my excuse to flirt with you. Maybe these things are coincidences. But if they give me another reason to smile about us, I'm keeping the theory.
+                </p>
+                <div class="letter-quote-box">
+                  <p class="letter-p quote-core">
+                    I hope this little website reminds you of something simple:
+                  </p>
+                  <p class="letter-p quote-strong">You matter to me.</p>
+                  <p class="letter-p sub-quote">Not just on your Birthday.</p>
+                  <p class="letter-p sub-quote">Not just when everything is perfect.</p>
+                  <p class="letter-p sub-quote">But in the ordinary moments, the random conversations, and the days when we don't even realize how much a small interaction can mean.</p>
+                </div>
+                <p class="letter-p">
+                  I don't need a grand occasion to appreciate you.
+                </p>
+                <p class="letter-p">
+                  I just wanted to make something that feels a little like us.
+                </p>
+                <p class="letter-p letter-happy-wishes">
+                  Happy Birthday, Anshita. <span class="heart-symbol">❤️</span>
+                </p>
+              </div>
+
+              <!-- Sign-off with Handcrafted Signature Script -->
+              <div class="letter-signature-block">
+                <p class="sign-until">Until our next little moment together,</p>
+                <p class="sign-name">Forever your Deep. ❤️</p>
+              </div>
+            </div>
+
+            <!-- Letter Bottom Action -->
+            <div class="letter-actions">
+              <button id="btn-bookmark-letter" class="btn btn-gold-outline" aria-label="Keep this letter close">
+                <span class="bookmark-icon">🔖</span>
+                <span class="btn-text">KEEP THIS LETTER CLOSE</span>
+              </button>
+              <div id="bookmark-status" class="bookmark-status" aria-live="polite"></div>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 5 — ONLY 33 KILOMETERS
+         ========================================== -->
+    <section id="scene-5" class="scene scene-highway" aria-label="Only 33 Kilometers">
+      <div class="scene-inner">
+        <div class="section-header">
+          <span class="eyebrow-tag">Visual Storyline</span>
+          <h2 class="scene-title">Only 33 Kilometers</h2>
+          <p class="scene-subtitle">A creative visualization between Amity University Raipur and Pandri, Raipur</p>
+        </div>
+
+        <!-- Glowing Interactive Connection Line & Floating Thoughts Highway -->
+        <div class="highway-container" id="highway-box">
+          <div class="highway-endpoints">
+            <div class="endpoint amity-point">
+              <div class="point-glow"></div>
+              <span class="point-title">Amity University Raipur</span>
+              <span class="point-subtitle">Where Deep starts the day</span>
+            </div>
+            <div class="endpoint pandri-point">
+              <div class="point-glow glow-rose"></div>
+              <span class="point-title">Pandri, Raipur</span>
+              <span class="point-subtitle">Where Anshita's smile shines</span>
+            </div>
+          </div>
+
+          <!-- Interactive Highway Track -->
+          <div class="highway-track" id="highway-track">
+            <div class="highway-beam"></div>
+            
+            <!-- Animated Translucent Message Bubbles Floating Along Path -->
+            <div class="message-bubble bubble-1" tabindex="0" role="button" aria-label="Message: Wish we could meet today.">
+              <span class="bubble-heart">💭</span>
+              <span class="bubble-msg">&ldquo;Wish we could meet today.&rdquo;</span>
+            </div>
+            <div class="message-bubble bubble-2" tabindex="0" role="button" aria-label="Message: Saving this moment for us.">
+              <span class="bubble-heart">✨</span>
+              <span class="bubble-msg">&ldquo;Saving this moment for us.&rdquo;</span>
+            </div>
+            <div class="message-bubble bubble-3" tabindex="0" role="button" aria-label="Message: Some conversations make the day better.">
+              <span class="bubble-heart">🌸</span>
+              <span class="bubble-msg">&ldquo;Some conversations make the day better.&rdquo;</span>
+            </div>
+            <div class="message-bubble bubble-4" tabindex="0" role="button" aria-label="Message: 33 km. Still close to my heart.">
+              <span class="bubble-heart">❤️</span>
+              <span class="bubble-msg">&ldquo;33 km. Still close to my heart.&rdquo;</span>
+            </div>
+          </div>
+
+          <!-- Main Poetic Message -->
+          <div class="highway-narrative">
+            <p class="highway-line-1">The road may take a little time...</p>
+            <p class="highway-line-2">But some people are worth every kilometer.</p>
+            <div class="highway-badge-hero">
+              <span class="badge-km-large">33 KM APART. STILL CONNECTED.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 6 — THE LITTLE THINGS I LOVE ABOUT YOU
+         ========================================== -->
+    <section id="scene-6" class="scene scene-little-things" aria-label="The Little Things I Love About You">
+      <div class="scene-inner">
+        <div class="section-header">
+          <span class="eyebrow-tag">Treasured Reasons</span>
+          <h2 class="scene-title">The Little Things I Love About You</h2>
+          <p class="scene-subtitle">Click or tap any card to reveal its personal thought</p>
+        </div>
+
+        <!-- 3x3 Responsive Grid of Elegant Glass Cards -->
+        <div class="cards-grid" role="list">
+          
+          <!-- Card 1 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="1">
+            <div class="card-front">
+              <div class="card-icon-halo">🌸</div>
+              <h3 class="card-title">YOUR SMILE</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;Because it has a way of making an ordinary moment feel special.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="2">
+            <div class="card-front">
+              <div class="card-icon-halo">✨</div>
+              <h3 class="card-title">YOUR KINDNESS</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;The little things you do say more than you realize.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="3">
+            <div class="card-front">
+              <div class="card-icon-halo">🌙</div>
+              <h3 class="card-title">YOUR PATIENCE</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;Because meaningful connections deserve understanding.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="4">
+            <div class="card-front">
+              <div class="card-icon-halo">💖</div>
+              <h3 class="card-title">YOUR CARING HEART</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;Because you make people feel that they matter.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="5">
+            <div class="card-front">
+              <div class="card-icon-halo">💬</div>
+              <h3 class="card-title">OUR RANDOM CONVERSATIONS</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;Because sometimes the simplest talks become the best memories.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="6">
+            <div class="card-front">
+              <div class="card-icon-halo">💫</div>
+              <h3 class="card-title">YOUR LITTLE EXPRESSIONS</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;The tiny things that are uniquely you.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="7">
+            <div class="card-front">
+              <div class="card-icon-halo">🕯️</div>
+              <h3 class="card-title">YOUR PRESENCE</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;Because even a short conversation can make a difference.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="8">
+            <div class="card-front">
+              <div class="card-icon-halo">🤝</div>
+              <h3 class="card-title">OUR FRIENDSHIP</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;Because being your bestie is part of what makes this bond special.&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="glass-reason-card" tabindex="0" role="listitem" aria-expanded="false" data-card="9">
+            <div class="card-front">
+              <div class="card-icon-halo">☀️</div>
+              <h3 class="card-title">THE WAY YOU MAKE ME SMILE</h3>
+              <span class="card-hint">Tap to reveal</span>
+            </div>
+            <div class="card-back">
+              <p class="card-reason-text">&ldquo;Because happiness sometimes arrives in the smallest messages.&rdquo;</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 7 — OUR LITTLE TIMELINE
+         ========================================== -->
+    <section id="scene-7" class="scene scene-timeline" aria-label="Our Little Timeline">
+      <div class="scene-inner">
+        <div class="section-header">
+          <span class="eyebrow-tag">Every Second With You</span>
+          <h2 class="scene-title">EVERY LITTLE MOMENT COUNTS</h2>
+          <p class="scene-subtitle">We've been collecting little moments, conversations, smiles, and memories.</p>
+        </div>
+
+        <div class="timeline-container" id="timeline-box">
+          <!-- Unconfigured Placeholder State (Default) -->
+          <div id="timeline-unconfigured" class="timeline-unconfigured">
+            <div class="unconfigured-icon">⏳</div>
+            <p class="unconfigured-text">&ldquo;Every story has a beginning. Ours is worth remembering.&rdquo;</p>
+            <p class="unconfigured-note">(Deep can set your special date inside <code>script.js</code> under <code>RELATIONSHIP_START_DATE</code>)</p>
+          </div>
+
+          <!-- Live Dynamic Counter (Shows when RELATIONSHIP_START_DATE is configured) -->
+          <div id="timeline-counter" class="timeline-counter is-hidden" aria-live="off">
+            <div class="counter-box">
+              <span class="counter-value" id="count-days">00</span>
+              <span class="counter-label">Days</span>
+            </div>
+            <div class="counter-separator">:</div>
+            <div class="counter-box">
+              <span class="counter-value" id="count-hours">00</span>
+              <span class="counter-label">Hours</span>
+            </div>
+            <div class="counter-separator">:</div>
+            <div class="counter-box">
+              <span class="counter-value" id="count-minutes">00</span>
+              <span class="counter-label">Minutes</span>
+            </div>
+            <div class="counter-separator">:</div>
+            <div class="counter-box">
+              <span class="counter-value" id="count-seconds">00</span>
+              <span class="counter-label">Seconds</span>
+            </div>
+          </div>
+
+          <div class="timeline-footer-note">
+            <span class="sparkle">✦</span> Every heartbeat across Raipur belongs to this moment <span class="sparkle">✦</span>
+          </div>
+
+          <!-- Confirmed Journey Milestones Track -->
+          <div class="timeline-milestones-track" aria-label="Our Special Milestones">
+            <h3 class="milestones-heading">✦ Chapters In Our Story ✦</h3>
+            <div class="milestones-list">
+              <!-- Milestone 1: The Faculty Room -->
+              <div class="milestone-item">
+                <div class="milestone-marker">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="milestone-card">
+                  <span class="milestone-badge">OUR FIRST LOOK</span>
+                  <h4 class="milestone-title">THE FACULTY ROOM</h4>
+                  <p class="milestone-desc">The moment Deep first saw Anshita and got completely lost in her eyes.</p>
+                </div>
+              </div>
+
+              <!-- Milestone 2: 3 September -->
+              <div class="milestone-item">
+                <div class="milestone-marker">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="milestone-card">
+                  <span class="milestone-badge">OUR FIRST CONVERSATION</span>
+                  <h4 class="milestone-title">3 SEPTEMBER</h4>
+                  <p class="milestone-desc">The date of our very first conversation — when one talk started a special bond.</p>
+                </div>
+              </div>
+
+              <!-- Milestone 3: 25 October -->
+              <div class="milestone-item highlight-anshita">
+                <div class="milestone-marker">
+                  <div class="marker-dot dot-rose"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="milestone-card">
+                  <span class="milestone-badge badge-rose">ANSHITA'S BIRTHDAY</span>
+                  <h4 class="milestone-title">25 OCTOBER</h4>
+                  <p class="milestone-desc">A little celebration of the person who makes this entire world brighter.</p>
+                </div>
+              </div>
+
+              <!-- Milestone 4: 3 November -->
+              <div class="milestone-item highlight-deep">
+                <div class="milestone-marker">
+                  <div class="marker-dot dot-gold"></div>
+                </div>
+                <div class="milestone-card">
+                  <span class="milestone-badge badge-gold">DEEP'S BIRTHDAY</span>
+                  <h4 class="milestone-title">3 NOVEMBER</h4>
+                  <p class="milestone-desc">Nine days after Anshita's birthday — completing our little number nine connection.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 8 — A LITTLE HEART, JUST FOR YOU
+         ========================================== -->
+    <section id="scene-8" class="scene scene-crystal" aria-label="A Little Heart, Just For You">
+      <div class="scene-inner">
+        <div class="crystal-stage">
+          
+          <div class="crystal-tagline">There's one little thing I want you to know.</div>
+
+          <!-- Interactive Large Geometric / Crystal Heart -->
+          <div class="crystal-heart-center" id="crystal-heart-wrapper">
+            <div class="crystal-halo-glow" id="heart-glow-field" aria-hidden="true"></div>
+            
+            <svg class="crystal-heart-svg" id="crystal-heart-svg" viewBox="0 0 300 280" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <linearGradient id="crystalGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF8FB1" stop-opacity="0.95"/>
+                  <stop offset="50%" stop-color="#C6B5FF" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#E8C98A" stop-opacity="0.95"/>
+                </linearGradient>
+                <linearGradient id="crystalGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#241536" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#11152C" stop-opacity="0.9"/>
+                </linearGradient>
+                <filter id="heartGlowFilter" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="8" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+              </defs>
+
+              <!-- Faceted Crystal Geometric Polygons -->
+              <polygon points="150,55 190,15 235,25 260,65 250,115 150,230" fill="url(#crystalGrad1)" fill-opacity="0.35" stroke="#E8C98A" stroke-width="1.5" />
+              <polygon points="150,55 110,15 65,25 40,65 50,115 150,230" fill="url(#crystalGrad2)" fill-opacity="0.45" stroke="#FF8FB1" stroke-width="1.5" />
+              <polygon points="150,55 190,15 150,230" fill="url(#crystalGrad1)" fill-opacity="0.5" stroke="#C6B5FF" stroke-width="1" />
+              <polygon points="150,55 110,15 150,230" fill="url(#crystalGrad2)" fill-opacity="0.5" stroke="#C6B5FF" stroke-width="1" />
+              <polygon points="190,15 235,25 200,90 150,55" fill="url(#crystalGrad1)" fill-opacity="0.4" stroke="#E8C98A" stroke-width="1" />
+              <polygon points="110,15 65,25 100,90 150,55" fill="url(#crystalGrad2)" fill-opacity="0.4" stroke="#FF8FB1" stroke-width="1" />
+              <polygon points="235,25 260,65 200,90" fill="url(#crystalGrad1)" fill-opacity="0.6" stroke="#E8C98A" stroke-width="1" />
+              <polygon points="65,25 40,65 100,90" fill="url(#crystalGrad2)" fill-opacity="0.6" stroke="#FF8FB1" stroke-width="1" />
+              <polygon points="260,65 250,115 200,140 200,90" fill="url(#crystalGrad1)" fill-opacity="0.3" stroke="#FF8FB1" stroke-width="1" />
+              <polygon points="40,65 50,115 100,140 100,90" fill="url(#crystalGrad2)" fill-opacity="0.3" stroke="#E8C98A" stroke-width="1" />
+              <polygon points="250,115 150,230 200,140" fill="url(#crystalGrad1)" fill-opacity="0.5" stroke="#E8C98A" stroke-width="1" />
+              <polygon points="50,115 150,230 100,140" fill="url(#crystalGrad2)" fill-opacity="0.5" stroke="#FF8FB1" stroke-width="1" />
+              <polygon points="150,55 200,90 200,140 150,230 100,140 100,90" fill="url(#crystalGrad1)" fill-opacity="0.65" stroke="#FFFFFF" stroke-width="1.8" filter="url(#heartGlowFilter)"/>
+            </svg>
+
+            <!-- Floating Tap Counter Indicator -->
+            <div class="heart-tap-counter" id="heart-tap-counter">
+              <span id="tap-count-text">Tap the heart</span>
+            </div>
+          </div>
+
+          <div class="crystal-action-box">
+            <button id="btn-tap-heart" class="btn btn-luxury" aria-label="Tap to feel the love">
+              <span class="btn-text">TAP TO FEEL THE LOVE</span>
+              <span class="btn-heart-beat">❤️</span>
+            </button>
+            <button id="btn-burst-scene-heart" class="btn btn-gold-outline btn-burst-trigger" aria-label="Burst heart with love">
+              <span class="btn-text">BURST WITH LOVE 💥</span>
+            </button>
+          </div>
+
+          <!-- Emotional Reveal (Revealed After Several Taps) -->
+          <div id="heart-revelation" class="heart-revelation" aria-live="polite">
+            <p class="revelation-lead">&ldquo;If I could give you one thing today...&rdquo;</p>
+            <p class="revelation-climax">I'd give you the chance to see yourself the way I see you.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE: A HANDMADE SURPRISE (Real Handcrafted Cards)
+         ========================================== -->
+    <section id="scene-handmade" class="scene scene-handmade" aria-label="A Sweet Handmade Surprise">
+      <div class="scene-inner handmade-inner">
+        <div class="section-header handmade-header">
+          <span class="eyebrow-tag">Handcrafted With Sweet Thoughts &bull; Just For You</span>
+          <h2 class="scene-title">A Sweet Handmade Surprise <span class="chocolate-emoji">🍫</span></h2>
+          <p class="section-subtext">Real handwritten notes, sweet chocolates, and thoughtful puns made with care by Deep.</p>
+        </div>
+
+        <!-- Handmade Cards Interactive Grid -->
+        <div class="handmade-grid" id="handmade-grid">
+          <!-- Card 1: KitKat -->
+          <article class="handmade-card" tabindex="0" role="button" data-handmade-idx="0" aria-label="Handmade Note 1: KitKat Break">
+            <div class="handmade-card-frame">
+              <div class="handmade-img-wrap">
+                <img src="assets/images/handmade-1.jpg" alt="Handmade KitKat Card: I never want to take a break from you" class="handmade-img" loading="lazy" />
+                <div class="handmade-zoom-hint" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span>Tap to Enlarge</span>
+                </div>
+              </div>
+              <div class="handmade-content">
+                <span class="handmade-tag">KitKat &bull; Sweet Puns</span>
+                <h3 class="handmade-quote">&ldquo;I never want to take a break from you...&rdquo;</h3>
+                <p class="handmade-desc">Because every conversation and little moment with you always feels too short.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Happydent Wave -->
+          <article class="handmade-card" tabindex="0" role="button" data-handmade-idx="1" aria-label="Handmade Note 2: Happydent Smile">
+            <div class="handmade-card-frame">
+              <div class="handmade-img-wrap">
+                <img src="assets/images/handmade-2.jpg" alt="Handmade Happydent Card: For the smile I always love to see" class="handmade-img" loading="lazy" />
+                <div class="handmade-zoom-hint" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span>Tap to Enlarge</span>
+                </div>
+              </div>
+              <div class="handmade-content">
+                <span class="handmade-tag">Happydent Wave &bull; Radiance</span>
+                <h3 class="handmade-quote">&ldquo;For the smile I always love to see...&rdquo;</h3>
+                <p class="handmade-desc">Your genuine smile is one of the most heartwarming things in this world.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Munch Max -->
+          <article class="handmade-card" tabindex="0" role="button" data-handmade-idx="2" aria-label="Handmade Note 3: Munch Max">
+            <div class="handmade-card-frame">
+              <div class="handmade-img-wrap">
+                <img src="assets/images/handmade-3.jpg" alt="Handmade Munch Card: Life is much better with you" class="handmade-img" loading="lazy" />
+                <div class="handmade-zoom-hint" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span>Tap to Enlarge</span>
+                </div>
+              </div>
+              <div class="handmade-content">
+                <span class="handmade-tag">Munch Max &bull; Pure Crunch</span>
+                <h3 class="handmade-quote">&ldquo;Life is much better with you...&rdquo;</h3>
+                <p class="handmade-desc">The simplest days turn into the best memories whenever you're around.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Perk Plus -->
+          <article class="handmade-card" tabindex="0" role="button" data-handmade-idx="3" aria-label="Handmade Note 4: Perk Plus">
+            <div class="handmade-card-frame">
+              <div class="handmade-img-wrap">
+                <img src="assets/images/handmade-4.jpg" alt="Handmade Perk Card: Thanks for being the Perk in my life" class="handmade-img" loading="lazy" />
+                <div class="handmade-zoom-hint" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span>Tap to Enlarge</span>
+                </div>
+              </div>
+              <div class="handmade-content">
+                <span class="handmade-tag">Perk Plus &bull; Good Energy</span>
+                <h3 class="handmade-quote">&ldquo;Thanks for being the Perk in my life....&rdquo;</h3>
+                <p class="handmade-desc">An instant boost of positivity, comfort, and laughter when it's needed most.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: 5 Star 3D -->
+          <article class="handmade-card" tabindex="0" role="button" data-handmade-idx="4" aria-label="Handmade Note 5: 5 Star">
+            <div class="handmade-card-frame">
+              <div class="handmade-img-wrap">
+                <img src="assets/images/handmade-5.jpg" alt="Handmade 5 Star Card: I give you 5 Stars for always listening to me" class="handmade-img" loading="lazy" />
+                <div class="handmade-zoom-hint" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span>Tap to Enlarge</span>
+                </div>
+              </div>
+              <div class="handmade-content">
+                <span class="handmade-tag">5 Star 3D &bull; Highest Rating</span>
+                <h3 class="handmade-quote">&ldquo;I give you 5 Stars for always listening to me.....&rdquo;</h3>
+                <p class="handmade-desc">For your patience, your understanding, and always being there to listen.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Dairy Milk Silk Oreo -->
+          <article class="handmade-card" tabindex="0" role="button" data-handmade-idx="5" aria-label="Handmade Note 6: Silk Oreo">
+            <div class="handmade-card-frame">
+              <div class="handmade-img-wrap">
+                <img src="assets/images/handmade-6.jpg" alt="Handmade Dairy Milk Silk Oreo Card: Always melting my heart" class="handmade-img" loading="lazy" />
+                <div class="handmade-zoom-hint" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span>Tap to Enlarge</span>
+                </div>
+              </div>
+              <div class="handmade-content">
+                <span class="handmade-tag">Silk Oreo &bull; Pure Warmth</span>
+                <h3 class="handmade-quote">&ldquo;Always melting my heart.....&rdquo;</h3>
+                <p class="handmade-desc">Having a good friend like you is sweet, comforting, and deeply cherished.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="handmade-footer-note">
+          <p class="handmade-pledge">✦ Handcrafted by Deep &bull; Because good friends deserve special efforts ✦</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 9 — OUR CHERISHED MOMENTS (Gallery of 6 Real Photos)
+         ========================================== -->
+    <section id="scene-9" class="scene scene-photo-reveal scene-gallery-experience" aria-label="Our Cherished Moments">
+      <div class="scene-inner gallery-scene-inner">
+        <div class="memory-backdrop-dim" id="memory-dark-veil" aria-hidden="true"></div>
+
+        <div class="section-header gallery-header">
+          <span class="eyebrow-tag">Moments Frozen In Time</span>
+          <h2 class="scene-title">Our Cherished Memories</h2>
+          <p class="section-subtext">Every picture holds a feeling. Every memory brings a smile.</p>
+        </div>
+
+        <div class="gallery-showcase">
+          <!-- Main Interactive Memory Stage -->
+          <div class="gallery-main-stage">
+            <button id="gallery-btn-prev" class="gallery-nav-arrow arrow-prev" aria-label="Previous memory">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Featured Luxury Portrait Frame with Lightbox Zoom Trigger -->
+            <div class="luxury-portrait-frame memory-frame float-animation-alt" id="portrait-frame-2" tabindex="0" role="button" aria-label="Click to enlarge photo">
+              <div class="portrait-halo halo-champagne" aria-hidden="true"></div>
+              <div class="portrait-inner">
+                <img 
+                  src="assets/images/img_1.jpg" 
+                  alt="A cherished memory of Anshita" 
+                  class="portrait-img"
+                  id="gallery-main-img"
+                  loading="lazy"
+                />
+                <div class="portrait-glass-reflection" aria-hidden="true"></div>
+                <div class="photo-expand-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Tap to Enlarge</span>
+                </div>
+              </div>
+              <div class="frame-corner-ornament ornament-tl"></div>
+              <div class="frame-corner-ornament ornament-tr"></div>
+              <div class="frame-corner-ornament ornament-bl"></div>
+              <div class="frame-corner-ornament ornament-br"></div>
+            </div>
+
+            <button id="gallery-btn-next" class="gallery-nav-arrow arrow-next" aria-label="Next memory">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Dynamic Caption Sequence -->
+          <div class="portrait-caption-box memory-caption-box" id="gallery-caption-box">
+            <div class="caption-tag" id="gallery-caption-tag">Memory 01 &bull; Poise &amp; Grace</div>
+            <p class="caption-line-1" id="gallery-caption-quote">&ldquo;Some smiles stay with you long after the moment has passed.&rdquo;</p>
+            <div class="caption-pause-indicator" aria-hidden="true">✦ &bull; ✦</div>
+            <p class="caption-line-2" id="gallery-caption-sub">Sitting on the steps, radiant in peach and red, making the simplest moment feel like poetry.</p>
+            <p class="caption-line-3 emotional-affirmation" id="gallery-caption-affirmation">Graceful in every single way. <span class="heart-symbol">❤️</span></p>
+          </div>
+
+          <!-- Gallery Indicator Dots -->
+          <div class="gallery-dots" id="gallery-dots" role="tablist" aria-label="Memory selector">
+            <button class="gallery-dot active" data-index="0" role="tab" aria-selected="true" aria-label="Memory 1: Poise &amp; Grace"></button>
+            <button class="gallery-dot" data-index="1" role="tab" aria-selected="false" aria-label="Memory 2: Walking in Light"></button>
+            <button class="gallery-dot" data-index="2" role="tab" aria-selected="false" aria-label="Memory 3: Playful Candid"></button>
+            <button class="gallery-dot" data-index="3" role="tab" aria-selected="false" aria-label="Memory 4: Golden Hour Sunset"></button>
+            <button class="gallery-dot" data-index="4" role="tab" aria-selected="false" aria-label="Memory 5: Forever Special"></button>
+            <button class="gallery-dot" data-index="5" role="tab" aria-selected="false" aria-label="Memory 6: Deep &amp; Anshita"></button>
+          </div>
+
+          <!-- Interactive Polaroid Filmstrip (All 6 Real Photos) -->
+          <div class="gallery-filmstrip-wrapper">
+            <div class="filmstrip-label">
+              <span>✦ All 6 Real Memories &bull; Tap Any Photo ✦</span>
+            </div>
+            <div class="gallery-filmstrip" id="gallery-filmstrip">
+              <!-- Memory 1 -->
+              <button class="polaroid-card active" data-index="0" aria-label="View Memory 1: Poise &amp; Grace">
+                <div class="polaroid-thumb-wrapper">
+                  <img src="assets/images/img_1.jpg" alt="Poise &amp; Grace" class="polaroid-thumb" loading="lazy" />
+                </div>
+                <span class="polaroid-caption">Poise &amp; Grace</span>
+              </button>
+              <!-- Memory 2 -->
+              <button class="polaroid-card" data-index="1" aria-label="View Memory 2: Walking in Light">
+                <div class="polaroid-thumb-wrapper">
+                  <img src="assets/images/img_2.jpg" alt="Walking in Light" class="polaroid-thumb" loading="lazy" />
+                </div>
+                <span class="polaroid-caption">Walking in Light</span>
+              </button>
+              <!-- Memory 3 -->
+              <button class="polaroid-card" data-index="2" aria-label="View Memory 3: Playful Candid">
+                <div class="polaroid-thumb-wrapper">
+                  <img src="assets/images/img_3.jpg" alt="Playful Candid" class="polaroid-thumb" loading="lazy" />
+                </div>
+                <span class="polaroid-caption">Playful Candid</span>
+              </button>
+              <!-- Memory 4 -->
+              <button class="polaroid-card" data-index="3" aria-label="View Memory 4: Golden Hour Sunset">
+                <div class="polaroid-thumb-wrapper">
+                  <img src="assets/images/img_4.jpg" alt="Golden Hour Sunset" class="polaroid-thumb" loading="lazy" />
+                </div>
+                <span class="polaroid-caption">Golden Hour</span>
+              </button>
+              <!-- Memory 5 -->
+              <button class="polaroid-card" data-index="4" aria-label="View Memory 5: Forever Special">
+                <div class="polaroid-thumb-wrapper">
+                  <img src="assets/images/img_5.jpg" alt="Forever Special" class="polaroid-thumb" loading="lazy" />
+                </div>
+                <span class="polaroid-caption">Those Eyes</span>
+              </button>
+              <!-- Memory 6 -->
+              <button class="polaroid-card" data-index="5" aria-label="View Memory 6: Deep &amp; Anshita">
+                <div class="polaroid-thumb-wrapper">
+                  <img src="assets/images/img_6.jpg" alt="Deep &amp; Anshita Together" class="polaroid-thumb" loading="lazy" />
+                </div>
+                <span class="polaroid-caption">You &amp; Me ❤️</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SCENE 10 — UNTIL THE NEXT TIME (Sunrise & Holding Hands)
+         ========================================== -->
+    <section id="scene-10" class="scene scene-sunrise" aria-label="Until The Next Time">
+      <div class="sunrise-sky-bg" id="sunrise-sky" aria-hidden="true">
+        <div class="sunrise-sun-orb"></div>
+        <div class="sunrise-horizon-glow"></div>
+      </div>
+
+      <div class="scene-inner sunrise-content">
+        <div class="section-header">
+          <span class="eyebrow-tag">Looking Forward</span>
+          <h2 class="scene-title">Until The Next Time</h2>
+        </div>
+
+        <!-- Symbolic Silhouette Stage (Two Silhouettes Meeting & Holding Hands) -->
+        <div class="silhouettes-stage" id="silhouettes-stage" aria-label="Two symbolic silhouettes gently walking toward each other and holding hands">
+          <!-- Left Silhouette: Deep -->
+          <div class="silhouette-figure figure-deep" id="figure-deep" aria-hidden="true">
+            <svg viewBox="0 0 100 160" width="100" height="160" class="silhouette-svg">
+              <circle cx="50" cy="25" r="16" fill="url(#silGrad)" />
+              <path d="M 32 45 Q 50 42 68 45 L 64 105 L 36 105 Z" fill="url(#silGrad)" />
+              <path d="M 36 105 L 32 155 M 64 105 L 68 155" stroke="url(#silGrad)" stroke-width="8" stroke-linecap="round" />
+              <!-- Arm extending right toward Anshita -->
+              <path d="M 64 55 Q 80 80 96 90" stroke="url(#silGrad)" stroke-width="6" stroke-linecap="round" fill="none" />
+            </svg>
+          </div>
+
+          <!-- Sparkle of Connection Between Hands -->
+          <div class="hands-held-sparkle" id="hands-held-sparkle" aria-hidden="true">
+            <div class="sparkle-ring"></div>
+            <span class="sparkle-core">✨</span>
+          </div>
+
+          <!-- Right Silhouette: Anshita -->
+          <div class="silhouette-figure figure-anshita" id="figure-anshita" aria-hidden="true">
+            <svg viewBox="0 0 100 160" width="100" height="160" class="silhouette-svg">
+              <circle cx="50" cy="25" r="15" fill="url(#silGradRose)" />
+              <path d="M 34 45 Q 50 42 66 45 L 75 110 L 25 110 Z" fill="url(#silGradRose)" />
+              <path d="M 38 110 L 36 155 M 62 110 L 64 155" stroke="url(#silGradRose)" stroke-width="7" stroke-linecap="round" />
+              <!-- Arm extending left toward Deep -->
+              <path d="M 34 55 Q 18 80 4 90" stroke="url(#silGradRose)" stroke-width="6" stroke-linecap="round" fill="none" />
+            </svg>
+          </div>
+
+          <defs>
+            <linearGradient id="silGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#C6B5FF" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#11152C" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="silGradRose" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FF8FB1" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#241536" stop-opacity="0.95"/>
+            </linearGradient>
+          </defs>
+        </div>
+
+        <!-- Text Sequence -->
+        <div class="sunrise-poetry-box">
+          <p class="sunrise-line">Some days are busy.</p>
+          <p class="sunrise-line">Some plans take time.</p>
+          <p class="sunrise-line">Sometimes, we wish the distance were smaller.</p>
+          <div class="sunrise-pause">✦ &bull; ✦</div>
+          <p class="sunrise-line highlight-gold">But there will always be another moment to look forward to.</p>
+          <div class="sunrise-triad">
+            <span>Another conversation.</span>
+            <span>Another laugh.</span>
+            <span>Another memory.</span>
+          </div>
+          <p class="sunrise-final-pledge">
+            Until the next time we meet...<br>
+            <strong>I'll keep looking forward to our little moments.</strong>
+          </p>
+        </div>
+
+        <!-- Real Memory Keepsake (Deep & Anshita Side by Side) -->
+        <div class="together-moment-keepsake" id="together-moment-keepsake">
+          <div class="together-frame-luxury">
+            <div class="together-halo" aria-hidden="true"></div>
+            <div class="together-inner">
+              <img 
+                src="assets/images/img_6.jpg" 
+                alt="Deep and Anshita standing side by side" 
+                class="together-img"
+                loading="lazy"
+              />
+              <div class="together-reflection" aria-hidden="true"></div>
+            </div>
+            <div class="together-badge">Deep &amp; Anshita &bull; Side by Side</div>
+          </div>
+          <p class="together-note">&ldquo;From 33 kilometers between Amity and Pandri... to standing side by side under the same Raipur sky.&rdquo;</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         FINAL SCENE — JUST FOR YOU, ANSHITA
+         ========================================== -->
+    <section id="scene-11" class="scene scene-finale" aria-label="Just For You, Anshita">
+      <div class="scene-inner finale-inner">
+        
+        <!-- Animated Constellation Heart Field in Canvas/SVG -->
+        <div class="constellation-heart-box" id="constellation-box" aria-hidden="true">
+          <svg class="constellation-svg" viewBox="0 0 200 200">
+            <path id="constellation-line" d="M 100 160 L 50 110 Q 20 80 30 50 Q 40 20 70 25 Q 90 30 100 50 Q 110 30 130 25 Q 160 20 170 50 Q 180 80 150 110 Z" fill="none" stroke="#E8C98A" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+            <!-- Constellation Star Nodes -->
+            <circle cx="100" cy="50" r="3" fill="#FFF"/>
+            <circle cx="70" cy="25" r="3.5" fill="#FF8FB1"/>
+            <circle cx="30" cy="50" r="3" fill="#E8C98A"/>
+            <circle cx="50" cy="110" r="3" fill="#C6B5FF"/>
+            <circle cx="100" cy="160" r="4" fill="#FFF"/>
+            <circle cx="150" cy="110" r="3" fill="#C6B5FF"/>
+            <circle cx="170" cy="50" r="3" fill="#E8C98A"/>
+            <circle cx="130" cy="25" r="3.5" fill="#FF8FB1"/>
+          </svg>
+        </div>
+
+        <!-- Grand Finale Letter Card -->
+        <article class="finale-card">
+          <div class="finale-header">
+            <span class="finale-occasion">HAPPY BIRTHDAY</span>
+            <h2 class="finale-title">ANSHITA <span class="heart-accent">❤️</span></h2>
+          </div>
+
+          <div class="finale-letter-body">
+            <p>Thank you for being someone I can laugh with.</p>
+            <p>Thank you for all the little moments that have become special to me.</p>
+            <p class="highlight-bond">Thank you for being my wonderful good friend and my bestie.</p>
+            <p>Thank you for being you.</p>
+
+            <div class="finale-quote-break">
+              <p>Maybe 33 kilometers separate our everyday locations.</p>
+              <p>But distance has never been the only thing that defines a connection.</p>
+            </div>
+
+            <div class="finale-values-list">
+              <span>It's the conversations.</span>
+              <span>The smiles.</span>
+              <span>The memories.</span>
+              <span>The effort.</span>
+              <span>And the people who make even an ordinary day feel different.</span>
+            </div>
+
+            <p class="finale-gratitude">I'm glad you're part of my world.</p>
+
+            <div class="finale-takeaway-box">
+              <p class="takeaway-intro">And if there's one thing I want you to take away from this little surprise, it's this:</p>
+              <p class="takeaway-core">
+                &ldquo;You are special to me, Anshita. More than these words can fully explain.&rdquo;
+              </p>
+            </div>
+
+            <!-- Magic of Nine Climax Message -->
+            <div class="finale-magic-9-quote">
+              <p>&ldquo;Maybe nine is just a number.</p>
+              <p>But 3 September, that first look in the faculty room, and the way you make me smile?</p>
+              <p class="highlight-special">Those are the little things that make this story ours.&rdquo;</p>
+            </div>
+
+            <p class="finale-wish">Happy Birthday, Anshita.</p>
+            <div class="finale-signature">
+              <span class="sig-with-love">With love,</span>
+              <span class="sig-name">Your Deep. ❤️</span>
+            </div>
+          </div>
+
+          <!-- Final Interactions -->
+          <div class="finale-button-row">
+            <button id="btn-replay" class="btn btn-luxury" aria-label="Replay our story from the beginning">
+              <span class="btn-icon">↺</span>
+              <span class="btn-text">REPLAY OUR STORY</span>
+            </button>
+            <button id="btn-save-memory" class="btn btn-gold-outline" aria-label="Keep this little memory">
+              <span class="btn-icon">✨</span>
+              <span class="btn-text">KEEP THIS LITTLE MEMORY</span>
+            </button>
+          </div>
+
+          <div id="save-memory-toast" class="save-memory-toast" aria-live="polite"></div>
+
+          <div class="finale-footer-quote">
+            &ldquo;33 kilometers between our places. A thousand little reasons to smile because of you.&rdquo;
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================
+       FLOATING MUSIC PLAYER (Bottom-Right)
+       ========================================== -->
+  <aside class="floating-music-player" id="floating-music-player" aria-label="Romantic Music Player">
+    <audio id="bg-audio" preload="metadata">
+      <source src="assets/music/romantic-piano.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="player-panel">
+      <!-- Play/Pause Toggle Button -->
+      <button id="btn-audio-toggle" class="player-btn-play" aria-label="Play romantic piano music" aria-pressed="false">
+        <svg id="icon-play" class="audio-svg-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <svg id="icon-pause" class="audio-svg-icon is-hidden" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <rect x="6" y="4" width="4" height="16"/>
+          <rect x="14" y="4" width="4" height="16"/>
+        </svg>
+      </button>
+
+      <!-- Track Information & Visualizer -->
+      <div class="player-track-info">
+        <div class="track-header">
+          <span class="track-title" id="track-title">Romantic Piano</span>
+          <div class="audio-equalizer" id="audio-equalizer" aria-hidden="true">
+            <span class="eq-bar bar-1"></span>
+            <span class="eq-bar bar-2"></span>
+            <span class="eq-bar bar-3"></span>
+          </div>
+        </div>
+        <span class="track-artist">Chopin &bull; Nocturne in E♭</span>
+        
+        <!-- Progress Bar & Time -->
+        <div class="track-progress-container">
+          <div class="track-progress-bar" id="audio-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-fill" id="audio-progress-fill" style="width: 0%;"></div>
+          </div>
+          <div class="track-time">
+            <span id="time-current">0:00</span> / <span id="time-duration">4:31</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volume Mute Toggle -->
+      <button id="btn-audio-mute" class="player-btn-mute" aria-label="Mute audio">
+        <svg id="icon-vol" class="audio-svg-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Error/Fallback message badge -->
+    <div id="audio-status-msg" class="audio-status-msg" aria-live="polite"></div>
+  </aside>
+
+  <!-- Romantic Lightbox Modal for Fullscreen Memory Viewing -->
+  <div id="memory-lightbox" class="memory-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo view" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button id="lightbox-close" class="lightbox-btn-close" aria-label="Close photo view">&times;</button>
+      <button id="lightbox-prev" class="lightbox-nav-btn prev" aria-label="Previous photo">&#10094;</button>
+      <div class="lightbox-stage">
+        <div class="lightbox-frame">
+          <img id="lightbox-img" src="" alt="Enlarged memory" />
+        </div>
+        <div id="lightbox-caption" class="lightbox-caption">
+          <div id="lightbox-tag" class="caption-tag"></div>
+          <div id="lightbox-quote" class="lightbox-quote"></div>
+        </div>
+      </div>
+      <button id="lightbox-next" class="lightbox-nav-btn next" aria-label="Next photo">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- External CDN Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Handcrafted Core Script (Live Real-Time) -->
+  <script src="script.js?v=realtime_live"></script>
+</body>
+</html>
