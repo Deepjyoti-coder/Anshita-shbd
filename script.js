@@ -359,49 +359,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* --------------------------------------------------------------------------
-     8. SCENE 7: OUR LITTLE TIMELINE (CONFIGURABLE COUNTER)
+     8. SCENE 7: OUR LITTLE TIMELINE (CHAPTERS IN OUR STORY)
      -------------------------------------------------------------------------- */
-  const timelineUnconfigured = document.getElementById("timeline-unconfigured");
-  const timelineCounter = document.getElementById("timeline-counter");
-  const countDays = document.getElementById("count-days");
-  const countHours = document.getElementById("count-hours");
-  const countMinutes = document.getElementById("count-minutes");
-  const countSeconds = document.getElementById("count-seconds");
-
-  // Validate start date format
-  const isValidDate = (d) => {
-    return d && d !== "YYYY-MM-DD" && !isNaN(Date.parse(d));
-  };
-
-  if (isValidDate(RELATIONSHIP_START_DATE)) {
-    if (timelineUnconfigured) timelineUnconfigured.style.display = "none";
-    if (timelineCounter) timelineCounter.classList.remove("is-hidden");
-
-    const startDate = new Date(RELATIONSHIP_START_DATE).getTime();
-
-    const updateTimer = () => {
-      const now = new Date().getTime();
-      const diff = now - startDate;
-
-      if (diff > 0) {
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        if (countDays) countDays.textContent = String(days).padStart(2, "0");
-        if (countHours) countHours.textContent = String(hours).padStart(2, "0");
-        if (countMinutes) countMinutes.textContent = String(minutes).padStart(2, "0");
-        if (countSeconds) countSeconds.textContent = String(seconds).padStart(2, "0");
-      }
-    };
-    updateTimer();
-    setInterval(updateTimer, 1000);
-  } else {
-    // Graceful unconfigured state
-    if (timelineUnconfigured) timelineUnconfigured.style.display = "flex";
-    if (timelineCounter) timelineCounter.classList.add("is-hidden");
-  }
+  // Milestones track rendered cleanly without counter
 
   /* --------------------------------------------------------------------------
      9. SCENE 8: INTERACTIVE CRYSTAL HEART
